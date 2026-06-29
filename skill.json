@@ -1,0 +1,38 @@
+{
+  "name": "agentic-social-listener-skill",
+  "description": "Agentic Social Listener Skill. Automatically scans streaming social brand mentions, classifies sentiments (positive, neutral, negative), and generates context-aligned reply options.",
+  "version": "1.0.0",
+  "author": "alphaparkinc",
+  "inputs": {
+    "brand_name": {
+      "type": "string"
+    },
+    "social_posts": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "post_id": { "type": "string" },
+          "platform": { "type": "string", "enum": ["twitter", "reddit", "linkedin"] },
+          "text": { "type": "string" }
+        },
+        "required": ["post_id", "platform", "text"]
+      }
+    },
+    "brand_voice_guideline": {
+      "type": "string",
+      "default": "Professional, empathetic, and solution-oriented."
+    }
+  },
+  "outputs": {
+    "analyzed_posts": {
+      "type": "array",
+      "items": {
+        "post_id": { "type": "string" },
+        "sentiment": { "type": "string", "enum": ["positive", "neutral", "negative"] },
+        "urgency_score": { "type": "number" },
+        "draft_reply": { "type": "string" }
+      }
+    }
+  },
+  "prompt": "You are a brand reputation agent. Your task is to process incoming social posts mentioning {{brand_name}}. Identify post sentiment and compose a friendly, tailored response using the {{brand_voice_guideline}} guidelines."
+}
