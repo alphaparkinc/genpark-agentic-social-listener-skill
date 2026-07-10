@@ -1,5 +1,5 @@
 {
-  "name": "agentic-social-listener-skill",
+  "name": "genpark-agentic-social-listener-skill",
   "description": "GenPark AI Agent Skill - Agentic Social Listener Skill. Automatically scans streaming social brand mentions, classifies sentiments (positive, neutral, negative), and generates context-aligned reply options.",
   "version": "1.0.0",
   "author": "genpark",
