@@ -1,4 +1,4 @@
-# agentic-social-listener-skill
+# genpark-agentic-social-listener-skill
 
 > **GenPark AI Agent Skill** -- # Agentic Social Listener Skill
 
