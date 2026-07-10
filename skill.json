@@ -1,8 +1,8 @@
 {
   "name": "agentic-social-listener-skill",
-  "description": "Agentic Social Listener Skill. Automatically scans streaming social brand mentions, classifies sentiments (positive, neutral, negative), and generates context-aligned reply options.",
+  "description": "GenPark AI Agent Skill - Agentic Social Listener Skill. Automatically scans streaming social brand mentions, classifies sentiments (positive, neutral, negative), and generates context-aligned reply options.",
   "version": "1.0.0",
-  "author": "alphaparkinc",
+  "author": "genpark",
   "inputs": {
     "brand_name": {
       "type": "string"
@@ -11,11 +11,26 @@
       "type": "array",
       "items": {
         "properties": {
-          "post_id": { "type": "string" },
-          "platform": { "type": "string", "enum": ["twitter", "reddit", "linkedin"] },
-          "text": { "type": "string" }
+          "post_id": {
+            "type": "string"
+          },
+          "platform": {
+            "type": "string",
+            "enum": [
+              "twitter",
+              "reddit",
+              "linkedin"
+            ]
+          },
+          "text": {
+            "type": "string"
+          }
         },
-        "required": ["post_id", "platform", "text"]
+        "required": [
+          "post_id",
+          "platform",
+          "text"
+        ]
       }
     },
     "brand_voice_guideline": {
@@ -27,10 +42,23 @@
     "analyzed_posts": {
       "type": "array",
       "items": {
-        "post_id": { "type": "string" },
-        "sentiment": { "type": "string", "enum": ["positive", "neutral", "negative"] },
-        "urgency_score": { "type": "number" },
-        "draft_reply": { "type": "string" }
+        "post_id": {
+          "type": "string"
+        },
+        "sentiment": {
+          "type": "string",
+          "enum": [
+            "positive",
+            "neutral",
+            "negative"
+          ]
+        },
+        "urgency_score": {
+          "type": "number"
+        },
+        "draft_reply": {
+          "type": "string"
+        }
       }
     }
   },
